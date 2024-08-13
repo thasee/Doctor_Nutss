@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavours</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /*Font styling */
+        @font-face {
+            font-family: secondary;
+            src: url(assests/mangolia-font/Mangolia-2vvjw.ttf);
+        }
+
+        @font-face {
+            font-family: primary;
+            src: url(assests/coolvetica/coolvetica\ condensed\ rg.ttf);
+        }
+/* -----------------Nav Bar--------------------- */
+
+body {
+    margin: 0;
+    font-family: primary;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 0;
+    padding: 0;
+}
+
+.logo-header {
+    position: relative;
+    z-index: 10;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.header-nav {
+    background-color: #8B0000;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.logo-main img {
+    max-height: 200px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    padding-right: 0.5em;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+
+/* Responsive Styles for Nav */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 17em; /* Aligns the dropdown directly below the header */
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        max-height: 300px; /* Adjust as needed */
+    }
+
+    .nav-links li {
+        margin: 0; /* Remove margin to avoid unnecessary spacing */
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 1em;
+        color: black; /* Change font color to black */
+        padding: 10px 20px; /* Adjust padding to make the border shorter */
+        width: auto;
+        display: block;
+        border-bottom: 2px solid #8B0000; /* Add bottom border */
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    .nav-links a:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 17em; /* Aligns the dropdown directly below the header */
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        max-height: 300px; 
+    }
+
+    .nav-links li {
+        margin: 0; /* Remove margin to avoid unnecessary spacing */
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 1em;
+        color: black; 
+        padding: 10px 20px; 
+        width: auto;
+        display: block;
+        border-bottom: 1px solid #8B0000; 
+    }
+
+    .nav-links a:hover {
+        background-color: #f0f0f0;
+    }
+}
+/* -------------End of Nav Bar------------------- */
+
+/* -------------Favourites body begin------------------- */
+        body {
+            font-family: primary;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            font-family: secondary;
+            color: #8B0000;
+            font-size: 8em;
+            margin: 0.5em auto;
+            text-align: center;
+        }
+
+        .divider {
+            border-top: 0.25em solid #8B0000;
+            margin: 1.25em 0;
+        }
+
+        .subtitle {
+            font-size: 2em;
+            color: #7b7b7b;
+            text-align: center;
+            margin: 0;
+            line-height: 1.5;
+        }
+/* -------------Product Section begin------------------- */
+        .product-section {
+            padding: 1.25em;
+            position: relative;
+            height: 18em;
+            overflow: visible;
+            width: 100%;
+            margin-top: 8em;
+            margin-bottom: 20em;
+            display: flex !important;
+            flex-direction: column !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            width: 100%;
+            padding-right: var(--bs-gutter-x, 0.75rem);
+            padding-left: var(--bs-gutter-x, 0.75rem);
+            margin-right: auto;
+            margin-left: auto;
+        }
+        .product-section-image{
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin-bottom: 1em;
+        }
+        .product-1{
+            background-color: #fcd34d;
+        }
+        .product-2{
+            background-color:#c0d156 ;
+        }
+        .product-3{
+            background-color:#e3e648;
+        }
+        .product-4{
+            background-color:#88b6b6 ;
+        }
+        .product-5{
+            background-color: #e6b984;
+        }
+        .product-6{
+            background-color:#8d6637 ;
+        }
+        .product-image {
+           /* position: relative;*/
+            margin-top: 0 0.5em;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .img1 {
+            margin-left: 3em;
+            margin-right: -3em;
+        }
+
+        .desc {
+            margin-left: 8vw;
+        }
+
+        .display-4 {
+             font-size: calc(1.475rem + 2.7vw);
+             font-weight: 300;
+             line-height: 1.2;
+        }
+
+        .lead {
+            text-align: left;
+            font-size: 1.5rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 5em;
+            }
+
+            .subtitle {
+                font-size: 1.5em;
+            }
+            .product-section {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .product-section-image {
+                flex-direction: row;
+                width: 50%;
+                margin-bottom: 0;
+            }
+
+            .product-image {
+                margin-top: 1em;
+                margin-left: 0.5em;
+            }
+
+            .img2{
+                display: flex;
+                margin-left: -10em;
+                height: auto;
+                max-width: 25em;
+            }
+
+            .img1{
+                margin-left: -8em;
+                height: auto;
+                max-width: 25em;
+            }
+
+            .display-4{
+                font-size: 4em;
+            }
+
+            .desc {
+                margin-left: 0;
+                text-align: left;
+                margin-top: 1em;
+            }
+
+            .lead {
+                font-size: 1.5em;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 4em;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            .product-image {
+                height: auto;
+                width: 90em;
+                max-height: 25em;
+            }
+            .img2{
+                display: flex;
+                margin-left: -8em;
+                height: auto;
+                max-width: 25em;
+            }
+
+            .img1{
+                margin-left: -8em;
+                height: auto;
+                max-width: 25em;
+            }
+
+            .display-4{
+                font-size: 4em;
+            }
+
+            .desc {
+                margin-left: 0;
+                text-align: left;
+                margin-top: 1em;
+            }
+
+            .lead {
+                font-size: 1.5em;
+            }
+        }
+        @media (min-width: 992px) {
+    .product-section {
+        padding: 2em;
+    }
+
+    .display-4 {
+        font-size: 3.5rem;
+    }
+
+    .lead {
+        font-size: 1.5rem;
+    }
+}
+/* -------------Product Section End------------------- */
+/* -------------Back to Top Button------------------- */
+        #topBtn {
+            display: none; 
+            position: fixed; 
+            bottom: 20px;
+            right: 30px; 
+            z-index: 99;
+            border: none; 
+            outline: none; 
+            background-color:#ffbc00; 
+            color: white; 
+            cursor: pointer;
+            padding: 15px; 
+            border-radius: 10px; 
+            font-size: 18px; 
+            }
+
+        #topBtn:hover {
+            background-color: #555; /* Add a dark-grey background on hover */
+        }
+/* -------------Back to Top Button End------------------- */
+/* -------------Favourites body end------------------- */
+/* -------------Footer Begin------------------- */
+/* footer*/
+.foot-section {
+            position: relative;
+            height: 70vh;
+            color: white;
+        }
+        .foot-image {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            box-sizing: border-box;
+            
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .since {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        .description {
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 65vw;
+            font-size: 2.5em;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 2.5em;
+            margin: 0 10px;
+            padding: 5px 0;
+        }
+        .copyright {
+            font-size: 12px;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .overlay {
+                flex-direction: row;
+                align-items: flex-start;
+                padding: 40px;
+                max-width: 100vw;
+            }
+            .left-side {
+                max-width: 60%;
+            }
+            .logo {
+                width: 150px;
+                margin-top: 50px;
+                
+               
+            }
+            .since {
+                font-size: 24px;
+            }
+            .description {
+            font-size: 1em;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            margin-top: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 65vw;
+            font-size: 2.5em;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            margin: 0 10px;
+            padding: 5px 0;
+        }
+        }
+
+        @media(max-width:480px){
+            .description{
+                width: 100vw;
+            }
+        }
+/* -------------Footer End------------------- */
+    </style>
+</head>
+<body>
+
+        <!--Nav bar-->
+        <header class="logo-header">
+            <div class="logo-main">
+                <img src="assests/dr.nut-logo-final-texturied.png" alt="Dr. Nut Logo">
+            </div>
+        </header>
+        <nav class="header-nav">
+            <div class="menu-icon" id="menu-icon">
+                &#9776;
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="flavours.html">Flavours</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="#">Social</a></li>
+            </ul>
+        </nav>
+    
+        <!--Nav script-->
+        <script>
+            const menuIcon = document.getElementById('menu-icon');
+            const navLinks = document.getElementById('nav-links');
+        
+            menuIcon.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
+    
+        <!--End of Nav bar-->
+    
+    <div class="container">
+        <header class="fav-header">
+            <h1 class="h1 title">Flavours</h1>
+        </header>
+        <div class="divider"></div>
+        <p class="subtitle">
+            Introducing the new six member of the Dr. Nut family, Mango Kiwi Coconut Lemon Orange & Honey<br>
+            Sweet & Tangy in Every Sip
+        </p>
+    </div>
+    <section class="product-section product-1">
+        <div class="product-section-image">
+            <img src="assests/Dr.Nut Render/mango-side-tp.png" alt="Dr. Nut Blueberry" class="product-image img1">
+            <img src="assests/Dr.Nut Render/mango-front-tp.png" alt="Dr. Nut Blueberry" class="product-image img2">
+        </div>
+        <div class="desc">
+            <h2 class="display-4">Mango</h2>
+            <p class="lead">Lipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+        </div>
+    </section>
+
+    <section class="product-section product-2">
+        <div class="product-section-image">
+            <img src="assests/Dr.Nut Render/kiwi-side-tp.png" alt="Dr. Nut Blueberry" class="product-image img1 mr-2">
+            <img src="assests/Dr.Nut Render/kiwi-front-tp.png" alt="Dr. Nut Blueberry" class="product-image img2">
+        </div>
+        <div class="desc">
+            <h2 class="display-4 font-weight-bold">Kiwi</h2>
+            <p class="lead">Lipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+        </div>
+    </section>
+
+    <section class="product-section product-3">
+        <div class="product-section-image">
+            <img src="assests/Dr.Nut Render/lime-side-tp.png" alt="Dr. Nut Blueberry" class="product-image img1 mr-2">
+            <img src="assests/Dr.Nut Render/lime-front-tp.png" alt="Dr. Nut Blueberry" class="product-image img2">
+        </div>
+        <div class="desc">
+            <h2 class="display-4">Lime</h2>
+            <p class="lead">Lipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+        </div>
+    </section>
+
+    <section class="product-section product-4">
+        <div class="product-section-image">
+            <img src="assests/Dr.Nut Render/blueberry-side-tp.png" alt="Dr. Nut Blueberry" class="product-image img1 mr-2">
+            <img src="assests/Dr.Nut Render/blueberry-front-tp.png" alt="Dr. Nut Blueberry" class="product-image img2">
+        </div>
+        <div class="desc">
+            <h2 class="display-4">Blueberry</h2>
+            <p class="lead">Lipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+        </div>
+    </section>
+
+    <section class="product-section product-5">
+        <div class="product-section-image">
+            <img src="assests/Dr.Nut Render/coconut-side-tp.png" alt="Dr. Nut Blueberry" class="product-image img1 mr-2">
+            <img src="assests/Dr.Nut Render/coconut-front-tp.png" alt="Dr. Nut Blueberry" class="product-image img2">
+        </div>
+        <div class="desc">
+            <h2 class="display-4">Coconut</h2>
+            <p class="lead">Lipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+        </div>
+    </section>
+
+    <section class="product-section product-6">
+        <div class="product-section-image">
+            <img src="assests/Dr.Nut Render/real-nuts-side-tp.png" alt="Dr. Nut Blueberry" class="product-image img1 mr-2">
+            <img src="assests/Dr.Nut Render/real-nut-front-tp.png" alt="Dr. Nut Blueberry" class="product-image img2">
+        </div>
+        <div class="desc">
+            <h2 class="display-4">Real Nuts</h2>
+            <p class="lead">Lipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad</p>
+        </div>
+    </section>
+    <!--Button function-->
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Back To Top</button>
+
+    <script>
+        let mybutton = document.getElementById("topBtn");  // Corrected ID
+    
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+    
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+    
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+<!--Footer Section-->
+<section class="foot-section">
+    <div class="foot-image">
+        <img src="assests/f3.png" alt="Hero Image" class="hero-img">
+    </div>
+    <div class="overlay">
+        <div class="left-side">
+            <img src="assests\dr.nut-logo-final-texturied.png" alt="Dr. Nut Logo" class="logo">
+            <div class="since">Since 1982</div>
+            <p class="description">
+                Dr. Nut brings the natural taste from real organic fruits and nuts. 
+                There are no added flavours or preservatives in our products. 
+                Enjoy the refreshing taste in every sip of Dr. Nut...
+            </p>
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="flavours.html">Flavours</a>
+            <a href="contactus.html">Contact</a>
+            <a href="#">Social</a>
+        </nav>
+    </div>
+    <div class="copyright">2024 Dr. Nut's products</div>
+</section>
+    
+</body>
+</html>

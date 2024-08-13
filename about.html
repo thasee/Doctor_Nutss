@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nut</title>
+    <link rel="stylesheet" href="about.css">
+    <script src="about.js"></script>
+
+    <style>
+        @font-face {
+    font-family: secondary;
+    src: url(assests/mangolia-font/Mangolia-2vvjw.ttf);
+}
+
+    @font-face {
+        font-family: primary;
+        src: url(assests/coolvetica/coolvetica\ condensed\ rg.ttf);
+    }
+    header {
+    position: relative;
+    z-index: 10;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.header-nav {
+    background-color: #8B0000;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 11;
+}
+
+.logo-main img {
+    max-height: 200px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    padding-right: 0.5em;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+.nav-links a:hover {
+    background-color: #555;
+}
+        /* Responsive Styles for Nav */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 16em; 
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        max-height: 300px; /* Adjust as needed */
+    }
+
+    .nav-links li {
+        margin: 0; /* Remove margin to avoid unnecessary spacing */
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 1em;
+        color: black; /* Change font color to black */
+        padding: 10px 20px; /* Adjust padding to make the border shorter */
+        width: auto;
+        display: block;
+        border-bottom: 2px solid #8B0000; /* Add bottom border */
+        margin-left: 15vw;
+        margin-right: 15vw;
+    }
+
+    .nav-links a:hover {
+        background-color: #f0f0f0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 16em; /* Aligns the dropdown directly below the header */
+        right: 0;
+        background-color: #fff;
+        flex-direction: column;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        max-height: 300px; 
+    }
+
+    .nav-links li {
+        margin: 0; /* Remove margin to avoid unnecessary spacing */
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 1em;
+        color: black; /* Change font color to black */
+        padding: 10px 20px; /* Adjust padding to make the border shorter */
+        width: auto;
+        display: block;
+        border-bottom: 1px solid #8B0000; /* Add bottom border */
+    }
+
+    .nav-links a:hover {
+        background-color: #f0f0f0;
+    }
+}
+/* End of Nav Bar */
+    </style>
+</head>
+<body>
+    <!--Nav bar-->
+<header>
+    <div class="logo-main">
+        <img src="assests/dr.nut-logo-final-texturied.png" alt="Dr. Nut Logo">
+    </div>
+</header>
+<nav class="header-nav">
+    <div class="menu-icon" id="menu-icon">
+        &#9776;
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="flavours.html">Flavours</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="#">Social</a></li>
+    </ul>
+</nav>
+
+<!--Nav script-->
+<script>
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+
+    menuIcon.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+</script>
+
+<!--End of Nav bar-->
+        <section id="about" class="about-us">
+            
+                    
+                </div>
+            </div>        
+        </section>
+        <div class="hero-container">
+            <img class="hero-image" src="assests/about-header.jfif" alt="Coconuts" style="height: 96vh;">
+            <div class="hero-overlay">
+                <h1 class="hero-title text-end">About Us</h1>
+                <p class="hero-text text-end" style="color: #7b7b7b;">
+                    <b style="font-size: 50px;">W</b>e are Dr.Nut. Our vision is to bring you the best refreshing fruity caffeine drink. Our team and our discipline ensure that your products are top notch and consistence.We are innovative Eco-friendly and we commit zero animal cruelty.We are Dr.Nut Drink Dr.Nut. Its Delicious
+                </p>
+            </div>
+        </div>
+    <main>
+       <hr class="divider">
+        <section id="history" class="history">
+            <h2 style="color:#7b7b7b;font-family: url('assests\coolvetica\coolvetica  rg.ttf');font-size: 70px;">History of Dr. Nut</h2>
+            <p style="color:#7b7b7b;font-size: 30px;font-family: url('assests\coolvetica\coolvetica compressed rg.ttf');"><b style="font-size: 50px;">D</b>r. Nut was a booming brand of pop back in the days. But it never made it to the present day. Dr. Nut was originated in 1982 by Mr. Frankinsline. He used to be an animal surgeon and mostly treated eagles. He got an acorn stuck in them. Dr thought of a brilliant idea of making these nuts into drinks no one will get them stuck again. It became a legend in late 80s and with modernization Dr. Nut went downhill and was forgotten. More than 20 years later... Looking at a dying legend, our team decided to bring back the brand Dr. Nut back to life...</p>
+        </section>
+    </main>
+
+        <section>
+            <img src="assests\dr.nut-logo-final-texturied.png" class="lgo">
+            <div class="red-bdr"></div>
+            <img src="assests\il_570xn-748477899_my2b.jpg" class="vin">
+            <img src="assests\Dr_Nut_Its_Delicious_Cropped.jpg" class="crp">
+            <div class="ylw-bdr"></div>
+        </section>
+
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Back To Top &#x2BED</button>
+
+
+    <script>
+        let mybutton = document.getElementById("topBtn");  // Corrected ID
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0; 
+        document.documentElement.scrollTop = 0; 
+    }
+    </script>
+ <section class="foot-section">
+    <div class="foot-image">
+        <img src="assests/f3.png" alt="Hero Image" class="hero-img">
+    </div>
+    <div class="overlay">
+        <div class="left-side">
+            <img src="assests\dr.nut-logo-final-texturied.png" alt="Dr. Nut Logo" class="logo">
+            <div class="since">Since 1982</div>
+            <p class="description">
+                Dr. Nut brings the natural taste from real organic fruits and nuts. 
+                There are no added flavours or preservatives in our products. 
+                Enjoy the refreshing taste in every sip of Dr. Nut...
+            </p>
+        </div>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="flavours.html">Flavours</a>
+            <a href="contactus.html">Contact</a>
+            <a href="#">Social</a>
+        </nav>
+    </div>
+    <div class="copyright">2024 Dr. Nut's products</div>
+</section>
+
+</body>
+</html>
