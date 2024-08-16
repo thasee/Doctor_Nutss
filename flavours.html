@@ -278,6 +278,7 @@ body {
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
+                margin-bottom: 90px;
             }
             .product-section-image {
                 flex-direction: row;
@@ -398,128 +399,182 @@ body {
 /* -------------Favourites body end------------------- */
 /* -------------Footer Begin------------------- */
 /* footer*/
+
+/* footer*/
 .foot-section {
-            position: relative;
-            height: 70vh;
-            color: white;
-        }
-        .foot-image {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-        .hero-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.8;
-        }
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 20px;
-            box-sizing: border-box;
-            
-        }
-        .logo {
-            width: 100px;
-            height: auto;
-            margin-bottom: 10px;
-        }
-        .since {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        .description {
-            font-size: 24px;
-            line-height: 1.4;
-            margin-bottom: 20px;
-            margin-top: 0px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 65vw;
-            font-size: 2.5em;
-        }
-        .navigation {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .navigation a {
-            color: white;
-            text-decoration: none;
-            font-size: 2.5em;
-            margin: 0 10px;
-            padding: 5px 0;
-        }
-        .copyright {
-            font-size: 12px;
-            opacity: 0.7;
-            margin-top: 10px;
-        }
+    position: relative;
+    height: 60vh;
+    color: white;
+}
+.foot-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+.logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+    
+}
+.since {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.description {
+    font-size: 24px;
+    line-height: 1.4;
+    
+    letter-spacing: 1px;
+    
+}
 
-        @media screen and (max-width: 768px) {
-            .overlay {
-                flex-direction: row;
-                align-items: flex-start;
-                padding: 40px;
-                max-width: 100vw;
-            }
-            .left-side {
-                max-width: 60%;
-            }
-            .logo {
-                width: 150px;
-                margin-top: 50px;
-                
-               
-            }
-            .since {
-                font-size: 24px;
-            }
-            .description {
-            font-size: 1em;
-            line-height: 1.4;
-            margin-bottom: 20px;
-            margin-top: 0px;
-            margin-left: auto;
-            margin-right: auto;
-            width: 65vw;
-            font-size: 2.5em;
-        }
+.left-side p{
+    width: 1000px;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-right: 60px;
+    padding-bottom: 20px;
+}
+.navigation a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 5px 0;
+}
+.copyright {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 10px;
+}
 
-        .navigation {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-        .navigation a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5em;
-            margin: 0 10px;
-            padding: 5px 0;
-        }
-        }
+@media (max-width: 768px){
+    .left-side p{
+    width: 300px;
+}
+.description{
+    font-size: 20px;
+    padding-bottom: 2px;
+}
+.move-top
+{left: 270px;
+        width: 100px;}
+}
 
-        @media(max-width:480px){
-            .description{
-                width: 100vw;
-            }
-        }
+@media screen and (min-width: 768px) {
+    .overlay {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 40px;
+    }
+    .left-side {
+        max-width: 10%;
+    }
+    .logo {
+        width: 150px;
+        margin-top: 50px;
+      
+        
+       
+    }
+    .since {
+        font-size: 24px;
+        padding-left: 40px;
+        margin-top: -20px;
+    }
+    .description {
+        font-size: 24px;
+        padding-left:300px;
+        margin-top: -130px;
+        width: 50vw;
+        text-align: left;
+        padding-right: 30px;
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 0;
+    }
+    .navigation a {
+        font-size: 24px;
+        margin: 5px 0;
+    }
+}
+
+        .top-image {
+     width: 100%;
+     height: 600px; /* Adjust this height as needed */
+     overflow: hidden;
+     position: relative;
+     display: none;
+     
+    
+
+
+}
+
+.top-img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+
+
+}
+
+.h1{
+text-align: left;
+padding-left: 85px;
+color:#8B0000;
+font-family: secondary;
+}        
+
+.top-image {
+width: 100%;
+height: 600px; /* Adjust this height as needed */
+overflow: hidden;
+position: relative;
+
+
+
+}
+
+.top-img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+
+
+
+}
 /* -------------Footer End------------------- */
     </style>
 </head>
@@ -632,7 +687,7 @@ body {
         </div>
     </section>
     <!--Button function-->
-    <button onclick="topFunction()" id="topBtn" title="Go to top">Back To Top</button>
+    <button onclick="topFunction()" id="topBtn" title="Go to top" class="move-top">Back To Top</button>
 
     <script>
         let mybutton = document.getElementById("topBtn");  // Corrected ID

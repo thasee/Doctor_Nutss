@@ -416,12 +416,14 @@ h2 {
     .ylw-bdr{
         margin-top: -10px;
     }
+
+    
 }
 
 /* footer*/
 .foot-section {
     position: relative;
-    height: 70vh;
+    height: 72vh;
     color: white;
 }
 .foot-image {
@@ -602,14 +604,12 @@ h2 {
 
     .hero-overlay {
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 100%;
+        
         height: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 10px;
+        padding-bottom: 430px;
     }
 
     .hero-title {
@@ -617,6 +617,7 @@ h2 {
         font-family: secondary;
         margin-left: 1vw;
         text-align: left;
+        margin-bottom: -22px;
     }
 
     
